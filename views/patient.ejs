@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>INFO-PATIENT</title>
+    <link rel="stylesheet" href="/pat-style.css">
+</head>
+<body>
+
+    <h1>Informations<br>du<br>Patient</h1>
+
+    <form action="/patient" method="POST">
+
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" required>
+        <br><br>
+
+        <label for="prenom">Prenom:</label>
+        <input type="text" name="prénom" id="prenom" placeholder="Entrez votre prenom" required>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Entrez votre age" required>
+        <br><br>
+
+        <label>Situation Matrimoniale:</label><br>
+        <input type="radio" id="single" name="situation" value="Single" required>
+        <label for="single">Single</label>
+
+        <input type="radio" id="married" name="situation" value="Married">
+        <label for="married">Married</label>
+
+        <input type="radio" id="divorced" name="situation" value="Divorced">
+        <label for="divorced">Divorced</label>
+        <br><br>
+
+        <label>Groupe Sanguin:</label><br>
+        <input type="radio" id="A" name="groupe" value="A" required>
+        <label for="A">A</label>
+
+        <input type="radio" id="B" name="groupe" value="B">
+        <label for="B">B</label>
+
+        <input type="radio" id="AB" name="groupe" value="AB">
+        <label for="AB">AB</label>
+
+        <input type="radio" id="O" name="groupe" value="O">
+        <label for="O">O</label>
+        <br><br>
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <% services.forEach(function(service){ %>
+                <option value="<%= service.Service_ID %>"><%= service.nom_service %></option>
+            <% }); %>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column; /* h1 on top of form */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 20px; /* slightly tighter */
+    color: #2f3640;
+}
+
+/* Header */
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px; /* tighter spacing */
+    font-weight: 600;
+    font-size: 2rem; /* previous font-size */
+    color: #2f3640;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    padding: 25px 30px; /* reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #2f3640;
+}
+
+/* Inputs & selects */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 15px; /* reduced spacing */
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 15px; /* previous font-size */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #40739e;
+    box-shadow: 0 0 5px rgba(64, 115, 158, 0.3);
+    outline: none;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: #a4b0be;
+    font-style: italic;
+}
+
+/* Radio buttons inline */
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+label[for="single"],
+label[for="married"],
+label[for="divorced"],
+label[for="A"],
+label[for="B"],
+label[for="AB"],
+label[for="O"] {
+    display: inline-block;
+    margin-right: 12px; /* slightly tighter */
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px 0; /* previous size */
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #40739e, #4cd137); /* new gradient style */
+    color: #ffffff;
+    font-size: 16px; /* previous font-size */
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(64,115,158,0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2f3640, #44bd32);
+    transform: scale(1.02);
+}
+
+/* Responsive for HD screens */
+@media (min-width: 1920px) {
+    form {
+        padding: 35px 45px;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px 0;
+        font-size: 16px;
+    }
+}

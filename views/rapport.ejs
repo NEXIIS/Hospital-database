@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport des Services</title>
+  <link rel="stylesheet" href="/rapp-style.css">
+</head>
+<body>
+  <h1>Rapport des Services</h1>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Docteurs</th>
+        <th>Patients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% reports.forEach(report => { %>
+        <tr>
+          <td><%= report.Service.length > 30 ? report.Service.substring(0,30) + '...' : report.Service %></td>
+          <td><%= report.Docteurs && report.Docteurs.length > 0 ? report.Docteurs : 'Empty' %></td>
+          <td><%= report.Patients && report.Patients.length > 0 ? report.Patients : 'Empty' %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

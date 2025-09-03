@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>INFO-DOCTEUR</title>
+    <link rel="stylesheet" href="/doc-style.css">
+</head>
+<body>
+
+    <h1>Informations<br>du<br>Docteur</h1>
+
+    <form action="/docteur" method="POST">
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+        <br><br>
+
+        <label for="prénom">Prenom:</label>
+        <input type="text" id="prénom" name="prénom" required>
+        <br><br>
+
+        <label for="matricule">Matricule:</label>
+        <input type="text" id="matricule" name="matricule" maxlength="12" 
+               pattern="[A-Za-z0-9]{12}" required placeholder="12 caractères">
+        <br><br>
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <% services.forEach(function(service){ %>
+                <option value="<%= service.Service_ID %>"><%= service.nom_service %></option>
+            <% }); %>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

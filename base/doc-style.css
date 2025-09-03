@@ -1,0 +1,149 @@
+/* Split-layout Ocean Blue Theme - Refined */
+
+/* Body */
+body {
+    background: linear-gradient(to bottom, #d0e7f9, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1b2a49;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Container for H1 + Form */
+.container {
+    display: flex;
+    flex-direction: row; /* side by side */
+    align-items: flex-start;
+    gap: 60px; /* space between h1 and form */
+}
+
+/* Header */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    max-width: 350px;
+    line-height: 1.2;
+    color: #1b2a49;
+    align-self: center;
+    white-space: pre-line; /* allows line breaks in HTML */
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center inputs inside form */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: -30px;
+    font-weight: 500;
+    width: 75%; /* aligned with input width */
+    text-align: left;
+}
+
+/* Inputs & selects */
+input[type="text"],
+select {
+    width: 75%; /* uniform width for all fields */
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #a9cce3;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Optional: adjust select padding for visual match */
+select {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 82%;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 75%; /* match input width */
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3498db, #1b2a49);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1b2a49, #2c3e50);
+    transform: scale(1.02);
+}
+
+/* HD responsiveness */
+@media (min-width: 1920px) {
+    .container {
+        gap: 80px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        max-width: 400px;
+    }
+
+    form {
+        width: 500px;
+        padding: 45px 50px;
+    }
+
+    label,
+    input[type="text"],
+    select,
+    button {
+        width: 75%; /* keep proportion */
+    }
+
+    input[type="text"],
+    select {
+        padding: 14px 18px;
+        font-size: 17px;
+    }
+
+    button {
+        padding: 16px 0;
+        font-size: 17px;
+    }
+}
+
+/* Mobile fallback - stack vertically */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
