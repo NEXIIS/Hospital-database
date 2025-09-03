@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 // --- Input Validation Function ---
 // Only letters, numbers, spaces, and hyphens allowed
 function validateInput(str) {
-  const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-]+$/;
+  const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-\/]+$/;
   return regex.test(str);
 }
 
