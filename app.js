@@ -14,10 +14,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // --- Input Validation Function ---
-// Only letters, numbers, spaces, and hyphens allowed
+// Only letters, numbers, spaces, hyphens, and slashes allowed
 function validateInput(str) {
   const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-\/]+$/;
-  return regex.test(str);
+  return regex.test(str.trim());
 }
 
 // --- Routes ---
